@@ -3,19 +3,32 @@
 header {
     .flex-justbtwn();
     border-bottom: 2px dashed @navigation-border;
-    padding: 5%;
+    padding: 3%;
+
+    
 
     div {
         .flex-justbtwn();
         max-width: 800px;
         width: 100%;
         margin: 0 auto;
+
+        @media @mobile {
+            flex-flow: column nowrap;
+            text-align: center;
+        }
     }
 
     nav {
         .flex-justbtwn();
         width: 40%;
         align-self: center;
+
+        @media @mobile {
+            padding: 3%;
+            width: 100%;
+            text-align: center;
+        }
         
         a {
             text-decoration: none;

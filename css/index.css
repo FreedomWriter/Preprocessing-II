@@ -172,11 +172,16 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}
 header {
   display: flex;
   justify-content: space-between;
   border-bottom: 2px dashed #C0C0C0;
-  padding: 5%;
+  padding: 3%;
 }
 header div {
   display: flex;
@@ -185,11 +190,24 @@ header div {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  header div {
+    flex-flow: column nowrap;
+    text-align: center;
+  }
+}
 header nav {
   display: flex;
   justify-content: space-between;
   width: 40%;
   align-self: center;
+}
+@media (max-width: 500px) {
+  header nav {
+    padding: 3%;
+    width: 100%;
+    text-align: center;
+  }
 }
 header nav a {
   text-decoration: none;
@@ -220,20 +238,45 @@ header nav a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    flex-flow: column nowrap;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 100%;
+  }
 }
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
+}
 .home .content-section .img-content img {
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content img {
+    width: 100%;
+  }
 }
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    flex-flow: column-reverse nowrap;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -247,6 +290,11 @@ header nav a {
   width: 75%;
   margin: 0 auto 30px;
 }
+@media (max-width: 500px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
 .home .content-destination img {
   border-radius: 10px;
 }
@@ -256,7 +304,33 @@ header nav a {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    flex-flow: column nowrap;
+  }
+}
 .home .content-pick .destination {
-  width: 30%;
+  width: 80%;
+  margin: 0 auto;
   margin-bottom: 30px;
+}
+.home .content-pick .destination .btn {
+  background-color: teal;
+  line-height: 3;
+  border-radius: 15px;
+  width: 80%;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination .btn {
+    background-color: teal;
+    line-height: 3;
+    border-radius: 15px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+  }
 }
