@@ -15,3 +15,38 @@
     font-size: 1.5rem;
 }
 
+@-webkit-keyframes pulse {
+    25% {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    75% {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+  }
+  
+  @keyframes pulse {
+    25% {
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    75% {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+  }
+  
+  .animate(@animation-duration: 2s) {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: @animation-duration;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+

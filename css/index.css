@@ -2,6 +2,28 @@
   display: flex;
   justify-content: space-between;
 }
+@-webkit-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+@keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -172,6 +194,11 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 800px) {
+  .container {
+    width: 90%;
+  }
+}
 @media (max-width: 500px) {
   .container {
     width: 90%;
@@ -190,6 +217,12 @@ header div {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 800px) {
+  header div {
+    flex-flow: column nowrap;
+    text-align: center;
+  }
+}
 @media (max-width: 500px) {
   header div {
     flex-flow: column nowrap;
@@ -202,9 +235,15 @@ header nav {
   width: 40%;
   align-self: center;
 }
+@media (max-width: 800px) {
+  header nav {
+    width: 100%;
+    padding: 3% 0 1%;
+  }
+}
 @media (max-width: 500px) {
   header nav {
-    padding: 3%;
+    padding: 3% 0 1%;
     width: 100%;
     text-align: center;
   }
@@ -238,6 +277,11 @@ header nav a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 800px) {
+  .home .content-section {
+    flex-flow: column nowrap;
+  }
+}
 @media (max-width: 500px) {
   .home .content-section {
     flex-flow: column nowrap;
@@ -246,6 +290,11 @@ header nav a {
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
+}
+@media (max-width: 800px) {
+  .home .content-section .text-content {
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
   .home .content-section .text-content {
@@ -256,6 +305,11 @@ header nav a {
   width: 48%;
   padding-left: 1%;
 }
+@media (max-width: 800px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
+}
 @media (max-width: 500px) {
   .home .content-section .img-content {
     width: 100%;
@@ -263,6 +317,11 @@ header nav a {
 }
 .home .content-section .img-content img {
   border-radius: 10px;
+}
+@media (max-width: 800px) {
+  .home .content-section .img-content img {
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
   .home .content-section .img-content img {
@@ -272,6 +331,11 @@ header nav a {
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 800px) {
+  .home .inverse-content {
+    flex-flow: column-reverse nowrap;
+  }
 }
 @media (max-width: 500px) {
   .home .inverse-content {
@@ -290,6 +354,11 @@ header nav a {
   width: 75%;
   margin: 0 auto 30px;
 }
+@media (max-width: 800px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
 @media (max-width: 500px) {
   .home .content-destination {
     width: 100%;
@@ -303,6 +372,11 @@ header nav a {
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .home .content-pick {
+    flex-flow: column nowrap;
+  }
 }
 @media (max-width: 500px) {
   .home .content-pick {
@@ -322,6 +396,27 @@ header nav a {
   color: white;
   text-align: center;
   font-size: 1.5rem;
+}
+.home .content-pick .destination .btn:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@media (max-width: 800px) {
+  .home .content-pick .destination .btn {
+    background-color: teal;
+    line-height: 3;
+    border-radius: 15px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 500px) {
   .home .content-pick .destination .btn {

@@ -13,6 +13,11 @@ header {
         width: 100%;
         margin: 0 auto;
 
+        @media @tablet {
+            flex-flow: column nowrap;
+            text-align: center;
+        }
+
         @media @mobile {
             flex-flow: column nowrap;
             text-align: center;
@@ -24,8 +29,13 @@ header {
         width: 40%;
         align-self: center;
 
+        @media @tablet {
+            width: 100%;
+            padding: 3% 0 1%;
+        }
+
         @media @mobile {
-            padding: 3%;
+            padding: 3% 0 1%;
             width: 100%;
             text-align: center;
         }
