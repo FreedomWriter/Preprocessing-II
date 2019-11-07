@@ -1,9 +1,7 @@
 .home {
-
   .welcome {
     padding-bottom: 2%;
     border-bottom: 2px dashed @navigation-border;
-    
 
     img {
       margin-bottom: 30px;
@@ -18,22 +16,22 @@
 
     @media @tablet {
       flex-flow: column nowrap;
-  }
+    }
     @media @mobile {
       flex-flow: column nowrap;
-  }
-    
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
 
       @media @tablet {
         width: 100%;
-    }
+      }
 
       @media @mobile {
         width: 100%;
-    }
+      }
     }
 
     .img-content {
@@ -42,22 +40,22 @@
 
       @media @tablet {
         width: 100%;
-    }
+      }
 
       @media @mobile {
         width: 100%;
-    }
+      }
 
       img {
         border-radius: 10px;
 
         @media @tablet {
           width: 100%;
-      }
+        }
 
         @media @mobile {
           width: 100%;
-      }
+        }
       }
     }
   }
@@ -68,11 +66,11 @@
 
     @media @tablet {
       flex-flow: column-reverse nowrap;
-  }
+    }
 
     @media @mobile {
       flex-flow: column-reverse nowrap;
-  }
+    }
 
     .text-content {
       padding-left: 1%;
@@ -91,11 +89,11 @@
 
     @media @tablet {
       width: 100%;
-  }
+    }
 
     @media @mobile {
       width: 100%;
-  }
+    }
 
     img {
       border-radius: 10px;
@@ -110,39 +108,32 @@
 
     @media @tablet {
       flex-flow: column nowrap;
-  }
+    }
 
     @media @mobile {
       flex-flow: column nowrap;
-  }
-
+    }
 
     .destination {
       width: 80%;
       margin: 0 auto;
       margin-bottom: 30px;
-      
-      
 
       .btn {
         .buttons();
 
         &:hover {
           .animate(1s);
-          
         }
 
         @media @tablet {
           .buttons(100%);
-      }
-        
+        }
+
         @media @mobile {
           .buttons(100%);
+        }
       }
-
-      }
-      
     }
-
   }
-}// home
+} // home
