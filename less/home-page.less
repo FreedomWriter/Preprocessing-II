@@ -1,4 +1,12 @@
 .home {
+  .welcome {
+    padding-bottom: 2%;
+    border-bottom: 2px dashed @navigation-border;
+
+    img {
+      margin-bottom: 30px;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,19 +14,48 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @tablet {
+      flex-flow: column nowrap;
+    }
+    @media @mobile {
+      flex-flow: column nowrap;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @tablet {
+        width: 100%;
+      }
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @tablet {
+        width: 100%;
+      }
+
+      @media @mobile {
+        width: 100%;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @tablet {
+          width: 100%;
+        }
+
+        @media @mobile {
+          width: 100%;
+        }
       }
     }
   }
@@ -26,6 +63,14 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @tablet {
+      flex-flow: column-reverse nowrap;
+    }
+
+    @media @mobile {
+      flex-flow: column-reverse nowrap;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -42,6 +87,14 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @tablet {
+      width: 100%;
+    }
+
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -53,9 +106,34 @@
     display: flex;
     justify-content: space-between;
 
+    @media @tablet {
+      flex-flow: column nowrap;
+    }
+
+    @media @mobile {
+      flex-flow: column nowrap;
+    }
+
     .destination {
-      width: 30%;
+      width: 80%;
+      margin: 0 auto;
       margin-bottom: 30px;
+
+      .btn {
+        .buttons();
+
+        &:hover {
+          .animate(1s);
+        }
+
+        @media @tablet {
+          .buttons(100%);
+        }
+
+        @media @mobile {
+          .buttons(100%);
+        }
+      }
     }
   }
-}// home
+} // home
